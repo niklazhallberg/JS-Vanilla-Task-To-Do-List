@@ -1,0 +1,65 @@
+<!-- to-do list by Niklaz Hallberg -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To-Do List</title>
+	<script type="text/javascript" src="../js/ovning1.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/ovning1.css"></li>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body onload="toDoList()">
+
+	<main role="main">
+
+		<div class="container-fluid">
+
+			<div class="container">
+
+				<!-- Café logotype row --> 
+				<div class="row header">
+					<div class="col-12 header-col">
+						<img src="../images/SVG/logotype.svg">
+					</div>
+				</div>
+
+				<div class="row list-row">
+
+					   <!-- To-do list col -->
+					<div class="col-12 col-md-6 list-col">
+						<h2>Veckans To-do lista:</h2> 
+						<form onsubmit="Done()" id="todo-form">
+							<ul id="to-do-list">
+							</ul>
+						</form>
+
+						<!-- Add item to to-do list -->
+						<h3>+ Lägg till ny aktivitet:</h3><br>
+						<span><input type="text" id="addbox"/></span>
+						<button type="submit" onclick="addToDo()" value="Submit">Lägg till</button>
+						<p id="error-msg"></p>
+					</div> 
+
+
+					 <!-- Done-activities list col -->
+					<div class="col-12 col-md-6 list-col-2">
+						<h2>Klara punkter :</h2>
+						<ul id="done-activities">
+						</ul>
+						<button onclick="clearArray()">Rensa klara punkter</button>
+					</div>
+
+				</div> <!-- list-row -->
+
+			</div> <!-- container -->
+
+		</div> <!-- container-fluid -->
+
+	</main>
+
+</body>
+</html>
